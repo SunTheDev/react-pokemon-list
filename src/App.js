@@ -91,7 +91,11 @@ function App() {
       <Title>Pokemon Search</Title>
       <TwoColumnLayout>
         <div>
-          <Input value={filter} onChange={(e) => setFilter(e.target.value)} />
+          <Input
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+            placeholder="Search..."
+          />
           <table width="100%">
             <thead>
               <tr>
@@ -117,7 +121,9 @@ function App() {
             </tbody>
           </table>
         </div>
-        {selectedItem && <PokemonInfo {...selectedItem} />}
+        <div className="pokeInfo">
+          {selectedItem && <PokemonInfo {...selectedItem} />}
+        </div>
       </TwoColumnLayout>
     </Container>
   );
