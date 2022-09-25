@@ -4,8 +4,6 @@ import { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import Button from "@mui/material/Button";
 
-console.log("");
-
 const PokemonRow = ({ pokemon, onSelect }) => (
   <tr>
     <td>{pokemon.name.english}</td>
